@@ -1,0 +1,823 @@
+/*
+    Document   : MPLStylesheet
+    Created on : 06/08/2015, 3:05:01 PM
+    Author     : emmamorrison
+    Description: CSS for the Melbourne Public Library
+
+
+eg.s font-family: 'Roboto Slab', serif; & font-family: 'IM Fell English', serif;
+*/
+
+* {margin: 0; padding: 0;}
+
+* {
+    font-size: 14px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    color: #333333;
+    letter-spacing: -.045em;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 28px;
+    font-family: 'IM Fell English', serif;
+    color: #00b6b9;
+    line-height: 2;
+
+}
+
+h3 {
+    font-size: 18px;
+    font-family: 'IM Fell English', serif;
+    color: #646c59;
+}
+
+
+strong {
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    color: #333333;
+    letter-spacing: -.045em;
+    line-height: 2;
+}
+
+/*CSS for background gradient if image doesn't load - all pages*/
+body {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+32,646c59+73 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 32%, #646c59 73%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(32%,#ffffff), color-stop(73%,#646c59)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 32%,#646c59 73%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 32%,#646c59 73%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 32%,#646c59 73%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#646c59',GradientType=0 ); /* IE6-9 */
+}
+
+/*CSS for background image - all pages*/
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+
+div#mainWrapper {
+    width: 1100px;
+    margin: 0 auto;
+    min-height: 700px;
+}
+
+header#banner {
+    position: relative;
+    height: 110px;
+    padding: 2em;
+
+}
+img#MPLLogo {
+    border: none;
+}
+
+
+
+/*Start of CSS for the navigation bar - all pages*/
+
+div.navigation {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+    padding: 1em .9em 0 .9em;
+    text-align: center;
+    /*border: 1px solid black;*/
+}
+
+nav.menu > ul{
+    display: inline-block;
+}
+
+nav.menu li {
+    float: left;
+    list-style-type: none;
+    position: relative;
+}
+
+nav.menu li a {
+    display: block;
+    width: 190px;
+    height: 20px;
+    margin:0 1px 0 1px;
+    text-decoration: none;
+    padding: .8em;
+    font-size: 1em;
+    font-weight: 400;
+    color: #ffffff;
+    background: #333333;
+    letter-spacing: .08em;
+    transition: background 0.6s;
+
+}
+
+nav.menu li:hover > a {
+    background: rgb(100, 108, 89);
+}
+
+nav.menu li:first-child a {border-top-left-radius: 10px;}
+nav.menu li:last-child a {border-top-right-radius: 10px;}
+
+/*END of CSS for the navigation bar - all pages*/
+
+
+
+
+/*Start of CSS for the centre container on home page*/
+
+section#feature {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 .9em;
+    text-align: center;
+    /*border: 1px solid black;*/
+}
+
+section#feature aside#welcome { /*The Welcome note and Opening Hours on the left hand side of the section*/
+    float: left;
+    width: 23%;
+    margin-left: 14px;
+    overflow: hidden;
+}
+
+section#feature aside div#welcomeInner {
+    padding: .8em .9em 1.5em 1em;
+    background: rgba(255, 255, 255, .3);
+    text-align: left;
+    overflow: hidden;
+}
+
+section#feature aside div#openingHours {
+    margin-top: 6px;
+    padding: .8em .9em 1.5em 1em;
+    background: rgba(255, 255, 255, .3);
+    border-bottom-left-radius: 15px;
+    text-align: left;
+}
+
+section#feature aside div#openingHours li {
+    list-style-type: none;
+}
+
+section#feature article {   /*The main area of the homepage, with What's on title'*/
+    float: right;
+    width: 73.5%;
+    margin-right: 14px;
+}
+
+section#feature article div#inner {
+    padding: .8em;
+    background: rgba(255, 255, 255, .3);
+    border-bottom-right-radius: 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+
+section#feature article div#carouselWrapper {
+    width: 750px;
+    height: 250px;
+    margin: 30px 10px 18px 10px;
+    overflow: hidden;
+
+}
+
+/*END of CSS for the centre container on home page*/
+
+
+
+
+/*Start of CSS for the footer - all pages*/
+
+footer {
+    height: 125px;
+    position: relative;
+    display: block;
+    clear: both;
+    min-width: 1024px;
+    margin: 5em auto 0 auto;
+    padding: 2em;
+    background: rgba(178, 195, 179, .6);
+}
+
+
+footer #info {
+    display: block;
+    float: left;
+    margin-left: 13px;
+    padding: 5px;
+}
+
+footer ul {
+    display: block;
+    float: right;
+    margin-right: 14px;
+    padding: 5px;
+}
+
+
+footer li {
+    list-style-type: none;
+    float: left;
+    font-weight: 300;
+    font-size: 12px;
+    padding-right: 5px;
+}
+
+footer li + li a {
+    /* Divider between each link */
+    border-left: 1px solid #333333;
+}
+
+footer li a {
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+footer a:hover {
+    color: rgb(100, 108, 89);
+}
+
+/*END of CSS for the footer - all pages*/
+
+
+
+
+/* Start of styling for <article> on pages other than the home page */
+section#feature .mainArticle {
+    float: right;
+    width: 94.5%;
+    margin-right: 14px;
+    margin-left: 14px;
+
+    background: rgba(255, 255, 255, .3);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: left;
+    overflow: hidden;
+    padding: 1em;
+}
+
+
+
+
+/* Start of styling for aboutUs page */
+section#feature .mainArticle div.libraryImages {
+    display: block;
+    float: left;
+    width: 30%;
+    padding: .8em;
+    margin: 1em;
+    margin-left: 2em;
+}
+
+div.libraryImages img {
+    width: 170px;
+    display: block;
+    margin: 10px 10px 10px 50px;
+    border: 1em solid white;
+}
+
+section#feature .mainArticle div#aboutUsDiv p#aboutUs {
+    font-size: 1.2em;
+    display: block;
+    width: 50%;
+    float: right;
+    margin: 1em 4em 1em 1em;
+    padding: .8em 2em .8em .8em;
+    font-size: 1.3em;
+    letter-spacing: .01px;
+}
+
+
+
+
+/*Start of styling for the membership page*/
+div#overviewDiv {
+    display: block;
+    margin: 2em auto;
+    width: 90%;
+}
+
+div#overviewDiv p#overviewP{
+    font-size: 1.2em;
+    display: block;
+    font-size: 1.3em;
+    letter-spacing: .01px;
+}
+
+.btn  {
+    display: block;
+    margin: 2em 0;
+    width: 110px;
+    height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+
+    font-size: .9em;
+    font-weight: 300;
+    color: #ffffff;
+    background: #333333;
+    letter-spacing: .08em;
+    transition: background 0.6s;
+}
+
+.btn:hover {
+    background: rgb(100, 108, 89);
+}
+
+div#registerFormDiv {
+    display: none;
+    margin: 2em auto;
+    padding: 1em 0 4em 2em;
+    width: 90%;
+    background-color: rgba(255,  255, 255, .5);
+    border-radius: 15px;
+}
+
+div#registerFormDiv h2 {
+    font-size: 20px;
+    font-family: 'IM Fell English', serif;
+    color: #7cc6c7;
+    line-height: 2;
+}
+
+div#registerFormDiv span {/*Styling for span tags on  the membership form*/
+    width: 200px;
+    color: red;
+    font-size: 12px;
+    vertical-align: text-top;
+}
+
+form#registerForm {
+    display: block;
+    margin: 2em auto;
+    width: 90%;
+}
+
+#registerForm section {
+    margin-bottom: 1em;
+}
+
+#registerForm section label {
+    display: block;
+    float: left;
+    margin: .3em .3em 0 0;
+    padding-right: 1em;
+    width: 12em;
+    text-align: right;
+    line-height: -0.5;
+    /*border: solid 1px black;*/
+}
+
+#registerForm section h5 {
+    display: block;
+    float: left;
+    clear: left;
+    margin-left: -5px;
+    font-size: 10px;
+    font-family: 'IM Fell Engish', serif;
+    color: #00b6b9;
+    /*border: solid 1px black;*/
+}
+
+#registerForm section input,
+#registerForm section select {
+    padding: .2em .4em;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: rgba(178, 195, 179, .4);
+    border-radius: 7px;
+    width: 400px;
+    height: 25px;
+    font-family: inherit; /* For Firefox - it uses Courier on text areas by default*/
+    transition: box-shadow, background-color 0.6s;
+
+}
+
+/*Below are the transition values for the input and select fields*/
+#registerForm section input:focus {
+    box-shadow: 1px 1px 3px rgba(178, 195, 179, .8);
+    background-color: rgba(178, 195, 179, .1);
+
+}
+
+#registerForm section select:focus {
+    box-shadow: 1px 1px 3px rgba(178, 195, 179, .8);
+    background-color: rgba(178, 195, 179, .1);
+}
+
+#registerForm section#submitSection {
+    display: block;
+    float: left;
+    clear: both;
+    height: 25px;
+    overflow: hidden;
+    padding: 0;
+    margin: 1em 0 3em 13.5em;
+    width: 405px;
+}
+
+#registerForm section#submitSection input#register,/*Membership form register button, Survey form submit button*/
+#surveyForm section#submitSection input#submitSurvey{
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 0 3px 0;
+    box-shadow: none;
+    width: 110px;
+    height: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: .9em;
+    font-weight: 300;
+    color: #ffffff;
+    background: #333333;
+    letter-spacing: .08em;
+    transition: background 0.6s;
+}
+
+#registerForm section#submitSection input#register:hover,
+#surveyForm section#submitSection input#submitSurvey:hover{
+    background: #00b6b9;
+    box-shadow: 1px 2px 3px rgba(0, 182, 185, .5);
+
+}
+
+#registerForm section#submitSection a#cancel {
+    display: block;
+    float: right;
+    margin: auto;
+    padding: 1px 0 0 0;
+    width: 110px;
+    height: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: .9em;
+    font-weight: 300;
+    color: #ffffff;
+    background: rgb(100, 108, 89);
+    letter-spacing: .08em;
+    transition: background 0.6s;
+}
+
+#registerForm section#submitSection a#cancel:hover,
+#surveyForm section#submitSection a#cancel:hover{
+    background: #333333;
+}
+
+
+
+
+
+/*Start of styling for the Survey page*/
+
+#surveyFormOverlay {
+    visibility: hidden;
+    position: absolute;
+    overflow: hidden;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1000;
+    background-color: rgba(130, 167, 152, .7);
+    transition: visibility 2s;
+}
+
+
+div#surveyFormDiv {
+    margin: 80px auto;
+    padding: 1em 0 4em 2em;
+    width: 500px;
+    background-color: rgb(255,  255, 255);
+    border-radius: 15px;
+}
+
+
+#surveyForm h3 {
+    display: block;
+    text-align: left;
+    padding: 0 0 1em 0;
+
+}
+
+
+form#surveyForm {
+    display: block;
+    margin: 2em auto;
+    width: 90%;
+    overflow: hidden;
+    text-align: left;
+}
+
+#surveyForm h4 {
+    line-height: .9;
+    color: #00b6b9;
+}
+
+#surveyForm section {
+    margin-bottom: 1em;
+}
+
+#surveyForm section label, p#radioLabel {
+    display: block;
+    clear: both;
+    margin: 1em .3em 1em 0;
+    padding-right: 1em;
+    width: 350px;
+    text-align: left;
+    line-height: -0.5;
+    /*border: solid 1px black;*/
+}
+
+
+div#surveyFormDiv span { /*Styling for span tags on  the survey form*/
+    width: 200px;
+    color: red;
+    font-size: 12px;
+}
+
+#surveyForm section input,
+#surveyForm section select {
+    float: left;
+    padding: .2em .4em;
+    margin-bottom: 2em;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: rgba(178, 195, 179, .4);
+    border-radius: 7px;
+    width: 400px;
+    height: 25px;
+    font-family: inherit; /* For Firefox - it uses Courier on text areas by default*/
+    transition: box-shadow, background-color 0.6s;
+/*    border: 1px solid black;*/
+
+}
+
+/*Below are the transition values for the input and select fields*/
+#surveyForm section input:focus {
+    box-shadow: 1px 1px 3px rgba(178, 195, 179, .8);
+    background-color: rgba(178, 195, 179, .1);
+
+}
+
+#surveyForm section select:focus {
+    box-shadow: 1px 1px 3px rgba(178, 195, 179, .8);
+    background-color: rgba(178, 195, 179, .1);
+}
+
+#surveyForm #radioSection {
+    display: block;
+    overflow: hidden;
+    padding: .2em .4em;
+    margin-bottom: 2em;
+    border: none;
+    text-align: left;
+    background-color: rgba(178, 195, 179, .4);
+    border-radius: 7px;
+    width: 400px;
+}
+
+#surveyForm section input[type="radio"] {
+    float: left;
+    clear: both;
+    width: auto;
+    margin: .08em 0 0 .6em;
+}
+
+#surveyForm section label.radio {
+    display: block;
+    float: left;
+    clear: none;
+    width: 10em;
+    padding-top: 1px;
+    margin:.15em 0 0 .6em;
+    line-height: 1.4;
+    text-align: left;
+
+}
+
+#surveyForm p#rating0 {
+    display: block;
+    margin: 0 0 5px 10px;
+    float: left;
+    clear: both;
+    width: auto;
+    overflow: hidden;
+    text-align: left;
+    font-size: .8em;
+}
+
+#surveyForm p#rating5 {
+    display: block;
+    margin: 0 4em 5px 10px;
+    float: right;
+    clear: none;
+    width: auto;
+    overflow: hidden;
+    text-align: right;
+    font-size: .8em;
+}
+
+/*Style for the range slide control*/
+#surveyForm p#slideValue {
+    display: block;
+    margin: -25px 0 5em 10px;
+    float: left;
+    clear: both;
+    width: 400px;
+    overflow: hidden;
+    font-size: .8em;
+    text-align: justify;
+    word-spacing: 3em;
+}
+
+
+#surveyForm section#submitSection a#cancel {
+    display: block;
+    float: right;
+    margin: auto 3em auto auto;
+    padding: 1px 0 0 0;
+    width: 110px;
+    height: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: .9em;
+    font-weight: 300;
+    color: #ffffff;
+    background: rgb(100, 108, 89);
+    letter-spacing: .08em;
+    transition: background 0.6s;
+}
+
+/*Start of styling for the Contact Us page*/
+img#librarian {
+    width: 250px;
+    display: block;
+    margin: 10px 10px 10px 0;
+    border: 1em solid white;
+}
+
+.contactDetails { /*refers to the styling for all <p> elements on Contact Us page*/
+    margin-left: 10px;
+}
+
+.contactDetails span {
+    color: #646c59;
+}
+
+a#registerLink {
+    color: #00b6b9;
+    text-decoration: none;
+}
+
+a#registerLink:hover {
+    color: #646c59;
+}
+
+.emailDetails { /*refers to the styling for all email addresses on Contact Us page*/
+    margin-left: 10px;
+}
+
+.emailDetails a{
+    text-decoration: none;
+    color: #646c59;
+}
+
+.emailDetails a:hover{
+    text-decoration: none;
+    color: #333333;
+}
+
+section#feature .mainArticle div#contactList {  /*refers to the block styling for the contactList div on right hand side of Contact Us page*/
+    display: block;
+    width: 50%;
+    float: right;
+    margin: 1em 4em 2em 0;
+    padding: .8em 2em .8em 0;
+
+}
+
+h2#contactSubHeader {
+    font-size: 16px;
+    margin-bottom: 2em;
+}
+
+div.outer { /*refers to the styling for the outer sub div on Contact Us page*/
+    display: block;
+    margin: 1em 4em 2em 0;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 1em;
+}
+
+
+div.inner { /*refers to the styling for the inner sub sub div on Contact Us page*/
+    display: none;
+    margin: 1em ;
+    padding-bottom: 1em;
+}
+
+
+/* CSS for confirmation containers*/
+
+section#confirmContainer {
+   overflow: hidden;
+   position: relative;
+   width: 100%;
+   height: 700px;
+   margin: 10px 0;
+   padding: 0 .9em;
+   text-align: center;
+ /*border: 1px solid black;*/
+}
+
+section#confirmContainer article {
+    float: left;
+    width: 80%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+section#confirmContainer article div#confirmInner {
+    padding: .8em;
+    background: rgba(255, 255, 255, .3);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+section#confirmContainer article div#confirmInner div#inner {
+    padding: .8em .8em 5em .8em;
+}
+
+section#confirmContainer article div div#inner div#registerResults {
+    padding: .8em;
+    line-height: 3;
+}
+
+section#confirmContainer article div div#inner div#registerResults span {
+    color: #00b6b9;
+    margin-right: 5px;
+    font-size: 1.2em;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
+
+section#confirmContainer section#closeSection a#backHome { /* home button*/
+    display: block;
+    float: right;
+    margin: 2em;
+    padding: 1px 0 1px 0;
+    box-shadow: none;
+    width: 180px;
+    height: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: .9em;
+    font-weight: 300;
+    color: #ffffff;
+    background: #333333;
+    letter-spacing: .08em;
+    transition: background 0.6s;
+}
+
+section#confirmContainer section#closeSection a#backHome:hover {
+    background: #00b6b9;
+}

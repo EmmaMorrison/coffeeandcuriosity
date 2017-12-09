@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Melbourne Public Library || Survey</title>
+    <link rel="icon" type="image/png" href="icons/Favicon.png">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|IM+Fell+English:400,400italic' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <link rel="stylesheet" href="css/MPLStylesheet.css" type="text/css">
+</head>
+<body>
+    <img src="images/MPL-background.png" class="bg" alt="">
+    <div id="mainWrapper">
+        <header id="banner">
+            <div>
+                <a href="index.html" ><img id="MPLLogo" src="images/MPL-logo-main.png" height="100px" /></a>
+            </div>
+        </header>
+        <div class="navigation">
+            <nav class="menu">
+                <ul><!--menu items"-->
+                    <li><a href="index.html">&nbsp; Home &nbsp;</a></li>
+                    <li><a href="aboutUs.html">&nbsp; About Us &nbsp;</a></li>
+                    <li><a href="membership.html">&nbsp; Membership &nbsp;</a></li>
+                    <li><a href="survey.html">&nbsp; Survey &nbsp;</a></li>
+                    <li><a href="contactUs.html">&nbsp; Contact Us &nbsp;</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section id="feature">
+            <article class="mainArticle">
+                <h2 id="mainHeader">A few questions...</h2>
+                <div id="overviewDiv">
+                    <p id="overviewP">Please take time to answer a few questions about the library and its services. These are designed to gather information about the general demographic of our patrons and make sure that Melbourne Public Library is in keeping with community and user expectations. All information gathered is treated with the strictest confidentiality.</p>
+
+                    <a href='#' class='btn register-button' onclick='overlay();'>Start survey</a>
+                </div>
+            </article>
+        </section>
+
+        <div id="surveyFormOverlay">
+            <div id='surveyFormDiv'>
+
+                <form name="surveyForm" id='surveyForm' method="get" action="surveyConfirm.html">
+                    <h3>Thank you for taking the survey.</h3>
+                    <h4>All fields need to be filled in before submitting the survey.</h4>
+
+                    <section>
+                        <label for='age'>Your age &nbsp;  <span id="ageSpan"> </span> </label>
+                        <input type='text' id='age' name='age' autofocus="autofocus" />
+                    </section>
+
+                    <p id='radioLabel'> Your gender &nbsp;  <span id="genderSpan"> </span></p>
+                    <section id='radioSection'>
+                        <!--Section for the radio button input -->
+                        <section>
+                            <input id="radio1" type='radio' name='gender' value="Female" />
+                            <label class='radio' for='radio1'>Female </label>
+                        </section>
+                        <section>
+                            <input id="radio2" type='radio' name='gender' value="Male" />
+                            <label class='radio' for='radio2'>Male </label>
+                        </section>
+                        <section>
+                            <input id="radio3" type='radio' name='gender' value="Undisclosed" />
+                            <label class='radio' for='radio3'>Do not wish to disclose </label>
+                        </section>
+                    </section>
+
+                    <section>
+                        <label for='bookCategory'>Favourite book category &nbsp;  <span id="categorySpan"> </span> </label>
+                        <select id='bookCategory' name='bookCategory'>
+                            <option value="Unselected">Select...</option>
+                            <option value="Art">Art</option>
+                            <option value="Fiction">Fiction</option>
+                            <option value="History">History</option>
+                            <option value="Management">Management</option>
+                            <option value="Science">Science</option>
+                            <option value="Science fiction">Science fiction</option>
+                            <option value="Technology">Technology</option>
+                        </select>
+                    </section>
+
+                    <section>
+                        <label for="rating" id="ratingLabel">Rate this site &nbsp;  <span id="ratingSpan"> </span> </label>
+                        <p id="rating0">0 = very poor</p>
+                        <p id="rating5">5 = excellent</p>
+                        <input type="range" id="rating" name="rating" min="0" max="5" step="1" value="3" />
+                        <p id="slideValue">0&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4&nbsp; 5</p>
+                    </section>
+
+                    <section id="submitSection">
+                        <input type="button" id="submitSurvey" value="Submit" />
+
+                        <a href="#" id="cancel">Cancel</a>
+                    </section>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/application.js"></script>
+</body>
+<footer>
+    <div id="info">
+        <h5> &copy; 2015 &nbsp; &VerticalLine; &nbsp; Emma Morrison &nbsp; &VerticalLine; &nbsp;Melbourne Public Library </h5>
+        <p>A Creative Victoria initiative <br/> on behalf of the Victorian Government</p>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">&nbsp; Home &nbsp;</a></li>
+            <li><a href="membership.html">&nbsp; Become a member &nbsp;</a></li>
+            <li><a href="contactUs.html">&nbsp; Contact Us &nbsp;</a></li>
+        </ul>
+    </nav>
+</footer>
+</html>

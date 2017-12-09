@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Melbourne Public Library || Membership</title>
+    <link rel="icon" type="image/png" href="icons/Favicon.png">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|IM+Fell+English:400,400italic' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <link rel="stylesheet" href="css/MPLStylesheet.css" type="text/css">
+    <script src="js/prefixfree.min.js"></script>
+</head>
+<body>
+    <img src="images/MPL-background.png" class="bg" alt="" >
+    <div id="mainWrapper">
+        <header id="banner">
+            <div>
+                <a href="index.html"><img id="MPLLogo" src="images/MPL-logo-main.png" height="100px" /></a>
+            </div>
+        </header>
+        <div class="navigation">
+            <nav class="menu">
+                <ul><!--menu items"-->
+                    <li><a href="index.html">&nbsp; Home &nbsp;</a></li>
+                    <li><a href="aboutUs.html">&nbsp; About Us &nbsp;</a></li>
+                    <li><a href="membership.html">&nbsp; Membership &nbsp;</a></li>
+                    <li><a href="survey.html">&nbsp; Survey &nbsp;</a></li>
+                    <li><a href="contactUs.html">&nbsp; Contact Us &nbsp;</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section id="feature">
+            <article class="mainArticle">
+                <h2 id="mainHeader">Become a Library member</h2>
+                <div id="overviewDiv">
+                    <p id="overviewP">Membership is free. Being a library member gives you access to our entire online resource collection. You can also borrow and reserve books through the website, and opt to have them mailed to you. If you sign up online, you will automatically be given a membership number, which will grant you immediate access to the library's online resources. Your card will be mailed within 7 days from registration.</p>
+
+                    <a href='#' class='btn register-button'>Register</a>
+                </div>
+                <div id='registerFormDiv'>
+                    <h2>Membership form</h2>
+                    <p><span>*</span> Mandatory fields</p>
+                    <form name="registerForm" id='registerForm' method="post" action="registerConfirm.html">
+                        <section>
+                            <label for='selectTitle'>Title </label>
+                            <select id='selectTitle' name='selectTitle' autofocus="autofocus" required="required">
+                                <option value="0">Select...</option>
+                                <option value="Dr">Dr</option>
+                                <option value="Miss">Miss</option>
+                                <option value="Mr">Mr</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Ms">Ms</option>
+                            </select>
+                        </section>
+                        <!--onsubmit="return validateForm()"-->
+                        <section>
+                            <label for='firstName'>First name </label>
+                            <input type='text' id='firstName' name='firstName' placeholder="eg. Lesley" required="required" /><span id="fnameSpan" > *</span>
+                        </section>
+
+                        <section>
+                            <label for='lastName'>Last name </label>
+                            <input type='text' id='lastName' name='lastName' placeholder="eg. Smith" required="required" /><span id="snameSpan"> *</span>
+                        </section>
+
+                        <section>
+                            <label for='address1'>Residential address </label>
+                            <input type='text' id='address1' name='address1' placeholder="1 Sample Street" required="required" /><span id="add1Span"> *</span>
+                        </section>
+
+                        <section>
+                            <label for='address2'></label>
+                            <input type='text' id='address2' name='address2' placeholder="&quot;Unit 2&quot; , &quot;Apt 10&quot;" />
+                        </section>
+
+                        <section>
+                            <label for='suburb'>Suburb </label>
+                            <input type='text' id='suburb' name='suburb' placeholder="Alphington" required="required" /><span id="suburbSpan"> *</span>
+                        </section>
+
+                        <section>
+                            <label for='postcode'>Postcode/zip code </label>
+                            <input type="text" id='postcode' name='postcode' required="required" /><span id="postcodeSpan"> *</span>
+                        </section>
+
+                        <section>
+                            <label for="country">Country </label>
+                            <select id="country" name="country" required="required" >
+                                <option value="0">Please select... </option>                                                                                            
+                                <option value="Australia">Australia</option>                               
+                                <option value="Christmas Island">Christmas Island</option>
+                                <option value="Cocos Islands">Cocos (Keeling) Islands</option>                              
+                                <option value="Cook Islands">Cook Islands</option>                             
+                                <option value="Fiji">Fiji</option>
+                                <option value="Nauru">Nauru</option>                               
+                                <option value="New Caledonia">New Caledonia</option>
+                                <option value="New Zealand">New Zealand</option>                           
+                                <option value="Norfolk Island">Norfolk Island</option>                                
+                                <option value="Palau">Palau</option>                              
+                                <option value="PNG">Papua New Guinea</option>                               
+                                <option value="Pitcairn">Pitcairn</option>                             
+                                <option value="Samoa">Samoa</option>                              
+                                <option value="Solomon Islands">Solomon Islands</option>                                                           
+                                <option value="Timor-Leste">Timor-Leste</option>                               
+                                <option value="Tonga">Tonga</option>                                
+                                <option value="Tuvalu">Tuvalu</option>                               
+                                <option value="Vanuatu">Vanuatu</option>                                
+                                <option value="Viet Nam">Viet Nam</option>                            
+                            </select> <span id="countrySpan"> *</span>
+                        </section>
+
+                        <section>
+                            <label for="contactNumber">Preferred contact number </label>
+                            <h5>Include country code if outside Australia</h5>
+                            <input type="text" id="contactNumber" name="contactNumber" placeholder="(02) 9221 1122 / 0466 111 222" required="required" /><span id="phonenumSpan"> *</span>
+                        </section>
+
+                        <section>
+                            <label for="email">Email </label>
+                            <input type="email" id="email" name="email" placeholder="sample@emailaddress.com" required="required" pattern="/\S+@\S+\.\S+/" /><span id="emailSpan"> *</span>
+                        </section>
+
+                        <section>
+                            <label for="confirmEmail">Confirmed email address </label>
+                            <input type="email" id="confirmEmail" name="confirmEmail"  /><span id="confirmEmailSpan"> *</span>
+                        </section>
+
+                        <section id="submitSection">
+                            <input type="submit" id="register" value="Register" />
+
+                            <a href="#" id="cancel">Cancel</a>
+
+                        </section>
+
+                    </form>
+                </div>
+
+            </article>
+        </section>
+
+    </div>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/application.js"></script>
+</body>
+<footer>
+    <div id="info">
+        <h5> &copy; 2015 &nbsp; &VerticalLine; &nbsp; Emma Morrison &nbsp; &VerticalLine; &nbsp;Melbourne Public Library </h5>
+        <p>A Creative Victoria initiative <br /> on behalf of the Victorian Government</p>
+    </div>
+    <nav>
+        <ul>          
+            <li><a href="index.html">&nbsp; Home &nbsp;</a></li>
+            <li><a href="membership.html">&nbsp; Become a member &nbsp;</a></li>
+            <li><a href="contactUs.html">&nbsp; Contact Us &nbsp;</a></li>
+        </ul>
+    </nav>
+</footer>
+</html>
+

@@ -1,0 +1,996 @@
+/*
+ * Style sheet for my personal website.
+ * Document created: 19/01/2017
+ *
+ * font-family: 'Encode Sans Condensed', sans-serif;
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 87.5%;
+  line-height: 1.6;
+  height: auto;
+}
+
+/*
+---------------------------------
+Keyframes settings
+---------------------------------
+*/
+
+/*!
+ * Below is from: animate.css -http://daneden.me/animate
+ * Version - 3.5.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2017 Daniel Eden
+ */
+
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0.2;
+  }
+}
+
+.flash {
+  animation-name: flash;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+}
+
+.flashDelay {
+  animation-name: flash;
+  animation-delay: 9s;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+
+}
+
+/*Greetings and Salutations colour change animation*/
+.colourAnimate {
+  animation-duration: 30s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.colAnimateDelay1 {
+   animation-delay: 2s;
+}
+
+.colAnimateDelay2 {
+   animation-delay: 4s;
+}
+
+
+@keyframes colorchange
+   {
+     0%   {fill: #333;}
+     25%  {fill: #dcdcdc;}
+     75%  {fill: #17e6d6;}
+     100% {fill: #333;}
+   }
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+  {
+    0%   {fill: #333;}
+    25%  {fill: #fff;}
+    75%  {fill: #17e6d6;}
+    100% {fill: #333;}
+  }
+
+.colourchange {
+  animation-name: colorchange;
+}
+
+.animateFadeIn {
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -120%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 120%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.rubberBand {
+  animation-name: rubberBand;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+/*
+---------------------------------
+Font settings
+---------------------------------
+*/
+
+h2, h4 {
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+h1, h3, h5, a, p, .descriptor, #aboutList, .form-label, .form-input, .button {
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+h1 {
+    display: block;
+    font-weight: 200;
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    color: #ada591;;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #17e6d6;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 200;
+    color: #17e6d6;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+}
+
+p {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #333;
+}
+
+h5 {
+    font-size: 1em;
+    font-weight: 400;
+    color: #333;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    font-size: 1.2em;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #17e6d6;
+}
+a:active {
+    color: rgba(251,251,251,0.3);
+}
+
+.svg {
+    fill: rgba(173, 165, 145, 0.7);
+    transition: fill 0.7s ease-in;
+}
+
+.svgMenuButton {
+  fill: rgba(255, 255, 255, 1);
+  transition: fill 0.7s ease-in;
+}
+
+.svg:hover {
+    fill: #17e6d6;
+}
+
+.svgMenuButton:hover {
+  fill: #17e6d6;
+}
+
+/*
+---------------------------------
+BACKGROUND settings - All pages
+---------------------------------
+*/
+
+body {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ada591+4,ede2da+45,ede2da+45 */
+    background: #ada591; /* Old browsers */
+    background: -moz-linear-gradient(top, #ada591 4%, #ede2da 45%, #ede2da 45%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ada591 4%,#ede2da 45%,#ede2da 45%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ada591 4%,#ede2da 45%,#ede2da 45%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ada591', endColorstr='#ede2da',GradientType=0 ); /* IE6-9 */
+    box-sizing: border-box;
+}
+
+/*CSS for background image - all pages*/
+
+div.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top:-10%;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  div.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+#Layer_2, #Layer_3, #Layer_4 {
+    stroke: #fff;
+    stroke-width: 2;
+    opacity: 0.9;
+}
+
+#Layer_5 {
+  stroke: #fff;
+  stroke-width: 3;
+  fill: none;
+  opacity: 0.5;
+
+}
+
+
+/*
+---------------------------------
+HEADINGS settings - All pages
+---------------------------------
+*/
+
+header.mainHeader {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    margin: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    height: 4.5em;
+    justify-content: space-between;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+40,0+100 */
+background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 70%, rgba(255,255,255,0.3) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 70%, rgba(255,255,255,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 70%, rgba(255,255,255,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+
+}
+
+.headerLogo {
+    width: 40%;
+    padding: 25px 1em;
+}
+
+.headerLogo img{
+  position: relative;
+  float: left;
+  margin: auto;
+  width: 50%;
+  min-width: 200px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.mainMenuDiv {
+  position: relative;
+  float: right;
+  cursor: pointer;
+  width: 45px;
+  z-index: 1;
+  padding-top: 15px;
+  visibility: visible;
+  transition: visibility 0.5s ease-in-out;
+}
+
+
+/*
+---------------------------------
+Menu layout settings
+---------------------------------
+*/
+
+
+.descriptor {
+  text-align: center;
+  font-size: .9em;
+  font-weight: lighter;
+  color: #333;
+  margin-top: 5px;
+  visibility: hidden;
+  transition: visibility 0.3s ease-in;
+
+}
+
+nav.mainNav {
+  display: flex;
+  position:fixed;
+  box-sizing: border-box;
+  z-index: 2;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100%;
+  padding: 1.5em;
+  flex-direction: column;
+  background-color: rgba(220, 220, 220, 0.8);
+  transition: right .7s linear 0.8s;
+}
+
+.mainNav heading {
+   margin: 17px 0;
+   border-bottom: solid 1px #333;
+   cursor: pointer;
+}
+
+#navHeading h5 {
+  color: #333;
+  transition: color 0.7s ease-in;
+}
+
+#navHeading h5:hover {
+   color: #17e6d6;
+}
+
+div.navDiv {
+  display: flex;
+  width: 70%;
+  height: 95%;
+  margin: auto;
+  padding: auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.subNavDiv {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin: auto;
+}
+
+.subNavDiv svg {
+  display: flex;
+  margin: auto;
+}
+
+
+
+/*
+---------------------------------
+Home Page layout settings
+---------------------------------
+*/
+
+div.mainWrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    flex-direction: column;
+
+}
+
+.greetingsSection, .introParagraph, .aboutParagraph {
+    display: flex;
+    position: relative;
+    background-color: rgba(255,255,255,0.9);
+    margin:  10em 0 0 0;
+    height: auto;
+    padding: 5em;
+    width: 100%;
+    flex-wrap: wrap;
+    /*align-content: center;*/
+}
+
+.greetingsDiv img {
+    width: 60%;
+    height: auto;
+}
+
+.introParagraph {
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5em 5% 5em 5%;
+  height: auto;
+
+}
+
+#introText {
+    width: 40%;
+    text-align: left;
+    height: auto;
+    font-size: 1.3em;
+}
+
+#introText p {
+    color: #17e6d6;
+
+
+}
+
+#introHiddenMessage {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    width: 40%;
+    /*min-width: 280px;*/
+
+}
+
+div.asideLink {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    padding: auto;
+    padding-left: 5px;
+    overflow: hidden;
+    height: 70px;
+    width: 250px;
+
+}
+
+.hiddenMessage {
+    display: none;
+    margin:  auto;
+    width: 250px;
+    padding: 10px;
+    background-color: white;
+}
+
+
+
+.asideLink h3 {
+    font-weight: 100;
+    font-size: 1.8em;
+    letter-spacing: .2em;
+}
+
+
+div.content {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+
+div.top img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 140px;
+    background-color: #333;
+}
+
+div.bottom img {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    width: 250px;
+    height: 140px;
+    background-color: #333;
+}
+
+.aboutParagraph {
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+    text-align:left;
+}
+
+.aboutParagraph h2 {
+    width: 90%;
+    margin-bottom: 2em;
+    /*padding-left: 2em;*/
+}
+
+#aboutPar01, #aboutPar02 {
+  position: relative;
+  width: 40%;
+  text-align: left;
+  height: auto;
+}
+
+#aboutList {
+    margin-top: 1em;
+    font-size: 1.3em;
+    line-height: 1.4;
+    font-weight: 300;
+    color: #333;
+
+}
+
+#aboutList > li{
+    margin-top: .5em;
+    margin-left: 2em;
+    list-style: circle outside;
+}
+
+
+#backToTop {
+    display: flex;
+    position: relative;
+    clear: both;
+    float: right;
+    width: 40px;
+    height: auto;
+    bottom: 40px;
+    right: 30px;
+    padding: auto;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+
+
+/*
+---------------------------------
+Portfolio Page layout settings
+---------------------------------
+*/
+
+#Layer_1FolioPage {
+  fill: #434343;
+  opacity: 0.9;
+
+}
+
+
+.headingSection {
+  display: flex;
+  position: relative;
+  background-color: rgba(255,255,255,0.9);
+  margin:  10em 0 0 0;
+  height: auto;
+  padding: 5em;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolioHeading {
+    width: 80%;
+    height: auto;
+}
+
+.portfolioHeading img {
+    width: 70%;
+    height: auto;
+    margin-top: 2em;
+}
+
+#portfolioIntro {
+    display: flex;
+    align-content: center;
+    width: 50%;
+    margin-top: 5em;
+
+}
+
+
+header.contactHeader {
+    width: 100%;
+    text-align: left;
+    height: auto;
+    padding: 1em 0 1em 0;
+    margin: 2.5em 0 5em 0;
+
+}
+
+
+#folioSection div.portfolioDivMain, div.portfolioDivSub {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    margin: 1em 2em 2em 2em;
+    padding: 1em;
+}
+
+div.portfolioDivSub {
+    margin-left: 0;
+    justify-content: flex-start;
+}
+
+div.portfolioDivSub h5 {
+    display: flex;
+    width: 100%;
+    font-size: 1.2em;
+    letter-spacing: 0.2em;
+    color: #17e6d6;
+    margin-bottom: 1em;
+    justify-content: flex-start;
+
+}
+
+div.portfolioDivSub div {
+    display: inherit;
+    position: relative;
+    flex-wrap: wrap;
+    margin: 1em;
+    padding: 0;
+}
+
+.folioImages {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 40%;
+    height: auto;
+    padding: auto;
+    overflow: hidden;
+    /*border: solid 1px black;*/
+}
+
+div.folioImages img {
+    width: 80%;
+    height: auto;
+    margin: auto;
+
+}
+
+#pdImage {
+    width: 60%;
+    height: auto;
+    cursor: pointer;
+}
+
+.portfolioDivSub div.blurb {
+    display: none;
+    width: 53%;
+    padding: 0;
+    text-align: left;
+    font-size: .9em;
+    color: #6e6e6e;
+}
+
+.portfolioDivSub div.PDInstaImages {
+    display: none;
+    flex-flow: row;
+    justify-content: space-around;
+    width: 110%;
+    height: 18em;
+    overflow-y: scroll;
+    background-color: white;
+    /*border: solid 1px black;*/
+}
+
+
+img.pdInstaImage {
+    width: auto;
+    height: 16em;
+    padding: 0;
+    margin: 1.3em;
+}
+
+
+/*
+---------------------------------
+Contact Page layout settings
+---------------------------------
+*/
+
+section#contactMain {
+   justify-content: flex-start;
+   min-width: 500px;
+   padding: 0 2em;
+}
+
+#contactSection {
+   position: relative;
+   width: 100%;
+   padding: 0 2em 4em 0;
+   text-align: left;
+   height: auto;
+}
+
+
+form#contactForm {
+   margin: 2em;
+}
+
+
+.form-label {
+  display: block;
+  position: relative;
+  float: left;
+  clear: both;
+  padding-left: 5px;
+  min-width: 300px;
+  font-size: 1.1em;
+  font-weight: 100;
+  color: #6e6e6e;
+}
+
+.form-input {
+  display: block;
+  position: relative;
+  float: left;
+  clear: both;
+  margin-bottom: 2em;
+  height: 2.2em;
+  width: 50%;
+  min-width: 300px;
+  padding: 5px;
+  border: none;
+  background-color: rgba(237, 226, 218, 0.5);
+  font-size: 1.2em;
+  font-weight: 100;
+  color: #333;
+
+}
+
+textarea.form-input {
+  height: 6em;
+  resize: none;
+
+}
+
+.buttonDiv {
+  display: block;
+  position: relative;
+  float: left;
+  padding: auto;
+  clear: both;
+  height: auto;
+  width: 50%;
+  min-width: 300px;
+  /*border: solid 1px black;*/
+}
+
+.button {
+  width: 40%;
+  height: 1.9em;
+  background-color: #6e6e6e;
+  font-size: 1.2em;
+  font-weight: 100;
+  color: rgba(237, 226, 218, 0.5);
+  border: none;
+  transition: color .6s, background-color .6s;
+}
+
+.submit {
+  float: left;
+  /*margin-right: 2em;*/
+}
+
+.cancel {
+   float: right;
+   /*margin-left: 2em;*/
+}
+
+.submit:hover {
+   background-color: #17e6d6;
+   color: rgba(237, 226, 218, 0.7);
+}
+
+.cancel:hover {
+  background-color: #9d9d9d;
+  color: rgba(237, 226, 218, 0.7);
+}
+
+
+
+
+/*
+---------------------------------
+FOOTER layout settings
+---------------------------------
+*/
+footer {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    clear: both;
+    height: auto;
+    background-color: #fff;
+
+}
+
+div#info, div#subNav, div#links {
+    position: relative;
+    margin: 2em 1em;
+    width: 25%;
+    min-width: 250px;
+    /*border: solid 1px black;*/
+
+}
+div#info {
+    float: left;
+    margin-left: 2em;
+}
+
+div#subNav {
+     float: right;
+     text-align: center;
+}
+
+div#links {
+    text-align: right;
+    margin-right: 2em;
+}
+
+.socialSprite1, .socialSprite2 {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-top: 1em;
+  margin-right: 0.5em;
+  padding: auto;
+  text-align: center;
+  vertical-align: center;
+
+}
+
+
+/*
+  ---------------------------------
+  MEDIA QUERIES
+  ---------------------------------
+*/
+
+
+
+@media screen and (max-width: 968px) {
+    .introParagraph, .aboutParagraph {
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    #introText, #aboutPar01 {
+        width: 80%;
+        text-align: center;
+    }
+
+    #introHiddenMessage, #aboutPar02 {
+        margin-top: 5em;
+        width: 70%;
+    }
+    #aboutPar02 {
+        text-align: left;
+    }
+
+    footer  {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 1em auto 1em auto;
+    }
+
+    div#info, div#subNav, div#links {
+      width: 90%;
+      text-align: center;
+      margin: auto;
+      margin-top: 1.5em;
+    }
+
+    div.portfolioDivSub {
+      justify-content: center;
+    }
+
+    div.portfolioDivSub h3 {
+      font-size: 1.6em;
+    }
+
+    div#info {
+      margin-bottom: 2em;
+    }
+}
+
+@media screen and (max-width: 790px) {
+
+    .mainMenuDiv, #backToTop {
+      right: 20px;
+    }
+
+    span.menu {
+      width: 180px;
+      height: 2.2em;
+      padding: 2px;
+
+    }
+
+    div.navDiv span.menu {
+      padding-right: -10px;
+    }
+}
